@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Choose your dataset specs {% endblock %}</h1>
+    <form method="post">
+        <label for="category1">Column 1</label>
+        <br>
+        <select name="category1"
+               value="{{ request.form['category1'] }}">
+               <option value="id">ID</option>
+               <option value="name">Name</option>
+               <option value="country">Country</option>
+        </select>
+        <br>
+
+        <label for="category2">Column 2</label>
+        <br>
+        <select name="category2"
+               value="{{ request.form['category2'] }}">
+               <option value="id">ID</option>
+               <option value="name">Name</option>
+               <option value="country">Country</option>
+        </select>
+        <br>        
+
+        <label for="category3">Column 3</label>
+        <br>
+        <select name="category3"
+               value="{{ request.form['category3'] }}">
+               <option value="id">ID</option>
+               <option value="name">Name</option>
+               <option value="country">Country</option>
+        </select>
+        <br>     
+
+        <label for="row_count">Number of rows</label>
+        <br>
+        <input name="row_count"
+                  >{{ request.form['row_count'] }}</input>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}
