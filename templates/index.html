@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>{% block title %} Choose your dataset specs {% endblock %}</h1>
+    <h1>1. Choose your dataset categories for each column</h1>
     <form method="post">
         <label for="category1">Column 1</label>
         <br>
         <select name="category1"
                value="{{ request.form['category1'] }}">
-               <option value="id">ID</option>
+               <option value="random_int">ID</option>
                <option value="name">Name</option>
                <option value="country">Country</option>
         </select>
@@ -17,7 +17,7 @@
         <br>
         <select name="category2"
                value="{{ request.form['category2'] }}">
-               <option value="id">ID</option>
+               <option value="random_int">ID</option>
                <option value="name">Name</option>
                <option value="country">Country</option>
         </select>
@@ -27,17 +27,32 @@
         <br>
         <select name="category3"
                value="{{ request.form['category3'] }}">
-               <option value="id">ID</option>
+               <option value="random_int">ID</option>
                <option value="name">Name</option>
                <option value="country">Country</option>
         </select>
-        <br>     
-
+        <br>
+    <h1>2. Choose the amount of rows</h1>
         <label for="row_count">Number of rows</label>
         <br>
         <input name="row_count"
                   >{{ request.form['row_count'] }}</input>
         <br>
         <button type="submit">Submit</button>
+    </form>
+    <br>
+    <table>
+        {% for row in matrix %}
+        <tr>
+            {% for item in row %}
+            <td>{{ item }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <h1>CSV Export</h1>
+    <form action="/export" method="POST">
+        <input type="submit" value="Export to CSV">
     </form>
 {% endblock %}
