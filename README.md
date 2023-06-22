@@ -1,2 +1,2 @@
 # datasetter
-Creates a dataset of randomized data
+Creates a dataset of randomized data and export it
