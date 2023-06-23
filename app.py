@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, url_for, flash, redirect, Response
 import pandas as pd
-from main import generate_data
+from main import generate_data, category_dict
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'a7d221fcc7abdc1e3b7442b13bd060e69b70da9309c0b0c2'
@@ -19,7 +19,7 @@ def process_form():
     row_count = int(request.form['row_count'])
 
     global list_of_lists 
-    list_of_lists = [[category1, category2, category3]]
+    list_of_lists = [[category_dict[category1], category_dict[category2], category_dict[category3]]]
     for row in range(row_count):
         generated_data = generate_data(category_list)
         list_of_lists.append(generated_data)

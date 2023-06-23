@@ -1,5 +1,11 @@
+nav {
+    background-color: #000043;
+    font-family: 'Segoe UI';
+}
+
 body {
     background-color: #2F4F4F;
+    font-family: 'Segoe UI';
 }
 h1 {
     color: #FFFFFF;
@@ -32,6 +38,7 @@ nav a {
 table {
     border-collapse: collapse;
     background-color: #FFFFFF;
+    font-family: 'Segoe UI';
 }
 
 td {
@@ -41,6 +48,6 @@ td {
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Creates two equal-width columns */
-    grid-gap: 20px; /* Adds some spacing between the columns */
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
 }
