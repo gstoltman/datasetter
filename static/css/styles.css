@@ -1,0 +1,46 @@
+body {
+    background-color: #2F4F4F;
+}
+h1 {
+    color: #FFFFFF;
+    font-family: 'Segoe UI';
+}
+form {
+    color: #FFFFFF;
+    font-family: 'Segoe UI';
+}
+.message {
+    padding: 10px;
+    margin: 5px;
+    background-color: #f3f3f3
+}
+nav a {
+    color: #FFFFFF;
+    font-size: 3em;
+    font-family: 'Segoe UI';
+    margin-left: 50px;
+    text-decoration: none;
+}
+
+.alert {
+    padding: 20px;
+    margin: 5px;
+    color: #970020;
+    background-color: #ffd5de;
+}
+
+table {
+    border-collapse: collapse;
+    background-color: #FFFFFF;
+}
+
+td {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Creates two equal-width columns */
+    grid-gap: 20px; /* Adds some spacing between the columns */
+}
