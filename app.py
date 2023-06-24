@@ -3,7 +3,7 @@ import pandas as pd
 from main import generate_data, category_dict
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'a7d221fcc7abdc1e3b7442b13bd060e69b70da9309c0b0c2'
+app.config['SECRET_KEY'] = ''
 
 @app.route('/')
 def index():
@@ -14,12 +14,16 @@ def process_form():
     category1 = request.form['category1']
     category2 = request.form['category2']
     category3 = request.form['category3']
+    category4 = request.form['category4']
 
-    category_list = [category1, category2, category3]
+    category_list = [category1, category2, category3, category4]
     row_count = int(request.form['row_count'])
 
     global list_of_lists 
-    list_of_lists = [[category_dict[category1], category_dict[category2], category_dict[category3]]]
+    list_of_lists = [[category_dict[category1], 
+                      category_dict[category2], 
+                      category_dict[category3], 
+                      category_dict[category4]]]
     for row in range(row_count):
         generated_data = generate_data(category_list)
         list_of_lists.append(generated_data)
