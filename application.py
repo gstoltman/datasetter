@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, url_for, flash, redirect, Res
 import pandas as pd
 from main import generate_data, category_dict
 
-app = Flask(__name__)
+application = Flask(__name__)
 
 @app.route('/')
 def index():
@@ -42,4 +42,4 @@ def export_csv():
 
 
 if __name__ == '__main__':
-    app.run()
+    application.run()
