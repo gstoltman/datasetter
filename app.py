@@ -3,7 +3,6 @@ import pandas as pd
 from main import generate_data, category_dict
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = ''
 
 @app.route('/')
 def index():
