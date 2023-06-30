@@ -160,9 +160,4 @@ cython_debug/
 #.idea/
 
 # custom files
-fake_check.py
 keys.txt
-# Elastic Beanstalk Files
-.elasticbeanstalk/*
-!.elasticbeanstalk/*.cfg.yml
-!.elasticbeanstalk/*.global.yml
